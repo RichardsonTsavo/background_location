@@ -110,7 +110,7 @@ class LocationUpdatesService : Service() {
             mFusedLocationCallback = object : LocationCallback() {
                 override fun onLocationResult(locationResult: LocationResult) {
                     super.onLocationResult(locationResult)
-                    onNewLocation(locationResult!!.lastLocation)
+                    onNewLocation(locationResult!.lastLocation)
                 }
             }
         } else {
