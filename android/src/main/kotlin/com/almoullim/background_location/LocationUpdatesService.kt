@@ -108,7 +108,7 @@ class LocationUpdatesService : Service() {
             mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
             
             mFusedLocationCallback = object : LocationCallback() {
-                override fun onLocationResult(locationResult: LocationResult?) {
+                override fun onLocationResult(locationResult: LocationResult) {
                     super.onLocationResult(locationResult)
                     onNewLocation(locationResult!!.lastLocation)
                 }
